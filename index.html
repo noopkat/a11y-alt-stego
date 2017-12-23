@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>A11y Steganography</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form>
+      <div class="group">
+        <label>Examples: 
+          <select id="exampleSelect">
+            <option>cats</option>
+            <option>bird</option>
+            <option>coffee</option>
+           </select> 
+        </label>
+      </div>
+      <span id="or">OR</span>
+      <div class="group">
+        <label>
+          <button type="button" aria-controls="fileupload">Choose image file</button>
+          <input id="fileupload" tabindex="-1" type="file"/>
+        </label>
+       <span id="filename">no file chosen</span>
+        <label>Alt text: <input type="text" /></label>
+        <input type="submit" value="Embed Text"/>
+      </div>
+    </form>
+
+    <div id="wrapper">
+      <div>
+        <img id="original" />
+        <p>original</p>
+      </div>
+      <div>
+        <img id="embedded" />
+        <p>embedded</p>
+      </div>
+    </div> 
+    <canvas id="canvas"></canvas>
+    <script src="js/dist/bundle.js"></script>
+  </body>
+</html>
